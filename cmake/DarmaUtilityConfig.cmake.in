@@ -1,0 +1,8 @@
+@PACKAGE_INIT@
+
+include(CMakeFindDependencyMacro)
+
+find_dependency(TinyMPL REQUIRED HINTS @TinyMPL_DIR@)
+
+include("${CMAKE_CURRENT_LIST_DIR}/darmaUtilityTargets.cmake")
+
