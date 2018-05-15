@@ -45,6 +45,8 @@ export(TARGETS darma_utility
 
 find_package(TinyMPL REQUIRED 2.0)
 
+message(STATUS "Found TinyMPL: ${TinyMPL_DIR}")
+
 target_link_libraries(darma_utility INTERFACE tinympl::tinympl)
 
 ################################################################################
@@ -140,3 +142,7 @@ write_basic_package_version_file(${CMAKE_CURRENT_BINARY_DIR}/DarmaUtilityConfigV
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/DarmaUtilityConfig.cmake ${CMAKE_CURRENT_BINARY_DIR}/DarmaUtilityConfigVersion.cmake
     DESTINATION cmake
 )
+
+################################################################################
+
+export(PACKAGE DarmaUtility)
